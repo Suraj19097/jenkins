@@ -1,0 +1,8 @@
+sudo systemctl stop jenkins    ----- stop jenkins
+sudo tar -czvf /opt/jenkins_backup_$(date +%F).tar.gz /var/lib/jenkins  ------- take jenins backup
+
+sudo rm -rf /var/lib/jenkins/*        ------ clear old jenkins directory
+
+sudo tar -xzvf /opt/jenkins_backup_2025-10-29.tar.gz -C /   ----- restore backup directory
+
+sudo systemctl start jenkins    ---- start jenkins 
